@@ -8,8 +8,8 @@ class Cli < Formula
   depends_on "go" => :build
 
   def install
-    ENV.deparallelize
-    system "go", "build", "-o", "bopmatic"
+    # ENV.deparallelize  # if your formula fails when building in parallel
+    system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
   test do
