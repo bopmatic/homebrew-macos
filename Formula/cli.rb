@@ -1,15 +1,15 @@
-class Cli < Formula
+lass Cli < Formula
   desc ""
   homepage ""
-  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.9.2.tar.gz"
-  sha256 "6e3eaf30c5db4bbdd3a9151636697aa49b8758c0427d5447efbe1170c614421a"
+  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.9.3.tar.gz"
+  sha256 "cec4a045862b9ba544931d9bca52323ed6a2194b7e8e710b8fa69f89e2f4a129"
   license ""
 
   depends_on "go" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", "-o", "bopmatic"
   end
 
   test do
