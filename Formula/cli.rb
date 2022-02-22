@@ -9,7 +9,8 @@ class Cli < Formula
 
   def install
     ENV.deparallelize
-    system "make"
+    system "echo", "v0.9.1", ">", "version.txt"
+    system "go", "build", "-o", "bopmatic"
   end
 
   test do
