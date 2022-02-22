@@ -9,7 +9,7 @@ class Cli < Formula
 
   def install
     ENV.deparallelize
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "make"
   end
 
   test do
