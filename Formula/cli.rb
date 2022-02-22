@@ -9,8 +9,6 @@ class Cli < Formula
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
-    ENV["GO111MODULE"] = "on"
-    ENV["GOFLAGS"] = "-mod=vendor"
     system "go", "build", "-o", "bopmatic"
     bin.install "bopmatic"
   end
