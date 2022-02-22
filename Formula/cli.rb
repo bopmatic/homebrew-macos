@@ -1,15 +1,14 @@
 class Cli < Formula
   desc ""
   homepage ""
-  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "d99112d52b70c003410ff23f5473c41d66601c5ad9a3c76bc049f2f78293612f"
+  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.9.2.tar.gz"
+  sha256 "6e3eaf30c5db4bbdd3a9151636697aa49b8758c0427d5447efbe1170c614421a"
   license ""
 
   depends_on "go" => :build
 
   def install
     ENV.deparallelize
-    system "echo", "v0.9.1", ">", "version.txt"
     system "go", "build", "-o", "bopmatic"
   end
 
