@@ -1,4 +1,4 @@
-lass Cli < Formula
+class Cli < Formula
   desc ""
   homepage ""
   url "https://github.com/bopmatic/cli/archive/refs/tags/v0.9.3.tar.gz"
