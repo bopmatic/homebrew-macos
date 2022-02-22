@@ -10,6 +10,8 @@ class Cli < Formula
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     system "go", "build", "-o", "bopmatic"
+    system "cp", "bopmatic", "/usr/local/bin"
+    system "chmod", "755", "/usr/local/bin/bopmatic"
   end
 
   test do
