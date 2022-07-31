@@ -1,8 +1,8 @@
 class Cli < Formula
   desc "Bopmatic CLI"
   homepage "github.com/bopmatic/cli"
-  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.9.6.tar.gz"
-  sha256 "0d7544844ca6688406accbca6a135324db0f04521fbc4789b88e2c351d936962"
+  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "0f23d54dfe13991358a0cf760c75fa3ebb68c3b73985812fb89644cf1160dd47"
   license "AGPL-3.0-only"
 
   depends_on "go" => :build
