@@ -5,11 +5,13 @@ class Cli < Formula
   sha256 "19fb109767a64c382fa3ce059c0afab2907cfa14f4f34caf8a8341e65e9963dd"
   license "AGPL-3.0-only"
 
+  depends_on "make" => :build
   depends_on "go" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
-    system "go", "build", "-o", "bopmatic"
+    system "make", "brewversion"
+    system "make", "build"
     bin.install "bopmatic"
   end
 
