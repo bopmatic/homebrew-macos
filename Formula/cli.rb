@@ -10,7 +10,7 @@ class Cli < Formula
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
-    system "make", "brewversion"
+    system "make", "BOPCLIVER=v0.15.0", "brewversion"
     system "make", "build"
     bin.install "bopmatic"
   end
