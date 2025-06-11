@@ -1,8 +1,8 @@
 class Cli < Formula
   desc "Bopmatic CLI"
   homepage "github.com/bopmatic/cli"
-  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.29.0.tar.gz"
-  sha256 "53539b822f0bd25cfb54ea38fd0888172b42249835e831474b7d08f15b8c2640"
+  url "https://github.com/bopmatic/cli/archive/refs/tags/v0.30.0.tar.gz"
+  sha256 "30b5cddb08a42729cc0588e5bab51007613c6fef6b78580585a9e47a82b7392d"
   license "AGPL-3.0-only"
 
   depends_on "make" => :build
@@ -10,7 +10,7 @@ class Cli < Formula
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
-    system "make", "BOPCLIVER=v0.29.0", "brewversion"
+    system "make", "BOPCLIVER=v0.30.0", "brewversion"
     system "make", "build"
     bin.install "bopmatic"
   end
